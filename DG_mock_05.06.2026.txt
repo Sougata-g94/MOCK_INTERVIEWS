@@ -1,0 +1,6 @@
+DG_mock_05.06.2026
+-----------------------
+1. Archive gap check parameter ?
+2. FAL server and FAL client purpose ? diffrence ?
+3. Normal view and meterelize view check ?
+4. MATERIALIZED VIEW changes hota hain ? -- no, koi DML operation allowed nei hain.

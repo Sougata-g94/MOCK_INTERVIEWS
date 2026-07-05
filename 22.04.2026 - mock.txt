@@ -1,0 +1,14 @@
+1. Archive log me - ARCn - optional process jo likhta hain.
+------------------------------------------------------------
+2. Archive log / ka default size -- 8gb
+------------------------------------------------------------
+3. SID & Database diffrence ? -- ek server pe 'prod' naam ka multiple database reh rakta hain, but SID alag hota hain.
+------------------------------------------------------------
+4. user & schema diffrence ?
+------------------------------------------------------------
+5. user lock & expired lock diffrence ?
+=> user lock - when a user is working on any table oracle creates a lock on this user.
+				 (unless commit)
+=> expired lock - when passsword got expired of any user.
+------------------------------------------------------------
+6. frequently undo retaintion policy error fix ?

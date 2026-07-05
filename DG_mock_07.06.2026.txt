@@ -1,0 +1,9 @@
+DG_mock_07.06.2026
+--------------------
+1. if instance got crash what will be approach ?
+2. tell me two ORA error that you resolved ?
+3. view & metaralize view diffrence ?
+4. Scan ip ?
+5. garrenty restore point snapshot.
+6.
+7.

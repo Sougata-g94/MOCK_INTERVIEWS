@@ -1,0 +1,31 @@
+Full_mock_12.06.2026
+=====================
+1. DB perform slow resolve
+2. sql query running slow fix
+3. 2 ora-error that you resolve
+4. deadlock resolved
+5. identify deadlock ? 
+	-- we're not fix that. oracle handle it itself.
+
+6. How to check primary and standby sync or not ? full syntax ?
+	-- SELECT NAME, VALUE, UNIT FROM V$DATAGUARD_STATS WHERE NAME IN ('transport lag','apply lag');
+
+	-- SELECT THREAD#, MAX(SEQUENCE#) FROM V$ARCHIVED_LOG GROUP BY THREAD#;
+
+7. Mera SGA size 50gb hain how to make it 150gb ? increase kaise hoga command bolo ?
+	-- ALTER SYSTEM SET sga_max_size=150G SCOPE=SPFILE;
+	-- ALTER SYSTEM SET sga_target=150G SCOPE=SPFILE;
+	-- SHUTDOWN IMMEDIATE;
+	-- STARTUP;
+	-- SHOW PARAMETER sga;
+
+8. suppose mere pass pfile,spfile,backup kuch bhi nei hain kya step hoga ?
+=> 
+---------------------------
+Day to day activity -- mainly devided into 2 parts. focasing diffrent type of monitoring and 2nd is diffrent type of user request. 
+1. we use to diffrent type of job Monitoring (RMAN/expdp), tablespace monitoring, mount point monitoring,
+diffrent type of alert log monitoring.
+
+2. Then we used to recived difftent types of user request like, object creation, adding column to table, permission related request, connection type of request (TNS), db refresh activity etc..
+
+ 

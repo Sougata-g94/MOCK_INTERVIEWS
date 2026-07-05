@@ -1,0 +1,4 @@
+mock - 20.05.2026
+---------------------
+1. table_exists_action parametr kya hain ?
+2. 

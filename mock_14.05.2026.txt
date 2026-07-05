@@ -1,0 +1,7 @@
+mock - 14.05.2026
+-----------------------
+1. what is db link ? type of dblink ?
+2. what is index
+3. what is flashback
+4. private synonym & public synonym diffrence -- public ka koi owner nei hota & private ka owner hota hain.
+5. PGA component ?

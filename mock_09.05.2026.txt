@@ -1,0 +1,4 @@
+1. highlevel watermark
+2. defragmentatin ? types of defragmentatin 
+3. ckpt information ?
+4. redolog information ?

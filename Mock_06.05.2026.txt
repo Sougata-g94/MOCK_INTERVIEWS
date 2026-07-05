@@ -1,0 +1,13 @@
+Mock - 06.05.2026
+---------------------------------
+1. root.sh ka kaam ?
+2. oracle_home and oracle__base diffrence ?
+3. which block we can insert ? -- free block
+4. AWR report purpose ?
+5. SQL tuning advisory ?
+6. parameter of profile names ?
+7. grace period in profile ?
+8. active and inactive session ?
+-----------------------------------
+
+

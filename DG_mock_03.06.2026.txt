@@ -1,0 +1,9 @@
+DG mock - 03.06.2026
+-------------------
+1. v$ views and dba views ?
+2. how to check index apply on which column ? -- DBA_IND_COLUMNS
+3. suppose, my alertlog file deleted, how to restore it ?
+4. how to enabled archive log ?
+	ANS> shutdown db - open in mount state - alter database archivelog
+5. what is Index ? types of index?
+

@@ -1,0 +1,19 @@
+1. restore and recovery diffrence ?
+2. what is profile ?
+3. what is password verified function ?
+4. what is grace time in profile ?
+5. what is synnonym ? (alias)
+6. purpose of synonym ?
+7. types of synonym ? diffrence ? (public and private)
+8. types of shutdown modes ? 4 types (immediate, abort, normal, TRANSACTIONAL)
+9. types of views ? (metaralize views and normal)
+10. how to check expired bckup ? -- RMAN> CROSSCHECK BACKUP;
+11. how to check opsolute bckup ? -- RMAN> REPORT OBSOLETE;
+12. How many types of rman retaintion policy ? -- 2 types. 
+	=> 1. Redundancy-Based Retention Policy AND, 2. Recovery Window-Based Retention Policy
+13. What is 'RMAN Retention Policy' ?
+	=> It tells RMAN which backups are no longer needed.
+14. how to take control files bckup ?
+	=> RMAN> BACKUP CURRENT CONTROLFILE;
+
+15. 

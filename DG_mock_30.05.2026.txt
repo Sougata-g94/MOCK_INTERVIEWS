@@ -1,0 +1,9 @@
+DG mock session ii
+------------------------
+1. redo transport services ? arcn,logwriter
+2. LNS and RFS ?
+3. snapshot and active DG diffrent ?
+4. how to redo apply on logical standby ? -- ALTER DATABASE START LOGICAL STANDBY
+APPLY IMMEDIATE;
+5. tablespace 90% full, how to solves ?
+6. 01555 error resolve ?

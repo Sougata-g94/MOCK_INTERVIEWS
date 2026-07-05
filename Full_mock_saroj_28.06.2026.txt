@@ -1,0 +1,12 @@
+Full_mock_saroj_28.06.2026
+----------------------------
+1. v$parameter use ?
+2. manual log switch command ?
+3. Architectures components ?
+4. how to create password file ?
+5. parameters of spfiles ?
+6. archive log enable and disable command ? 
+7. admin option and grant option ?
+8. why use temp.dbf for sorting when we have PGA ?
+9. scope=both,scope=memory,scope=spfile purpose ?
+10. 

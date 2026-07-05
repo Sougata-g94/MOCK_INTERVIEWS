@@ -1,0 +1,97 @@
+Full_mock_17.06.2026
+---------------------
+1. How to add a column to a table ?✅ -- alter table emp add column_name varchar(10);
+
+2. size check tablespace ? ✅-- DESC DBA_TABLESPACE_USAGE_METRICS;
+
+3. how to know b-tree & bitmap which index has applied ? ✅-- dba_indexes;
+	-- SELECT index_name,index_type from dba_indexes where table_name='emp';
+	-- OUTPUT : EMP_DEPT_IDX    BITMAP
+
+4. How to check tablespace for specific table ? ✅ -- desc dba_tables;
+
+5. How to move tablspace one to another table ? ✅
+	-- ALTER TABLE emp MOVE TABLESPACE users_new;
+
+6. How to move any index one tablespace to another ? ✅ -- ALTER INDEX emp_idx REBUILD TABLESPACE ts_index; 
+
+7. Control file missing how to restore ? -- (Add this to backup files) -- ✅
+
+8. DB refresh activity step ? -- (Add this to backup files) -- ✅
+
+9. If a query running how to find out index are using or not ? 
+	 -- EXPLAIN PLAN FOR SELECT * FROM emp WHERE empno = 100;
+Then -- SELECT * FROM TABLE(DBMS_XPLAN.DISPLAY);
+
+10. On which column index are used check ? ✅-- desc dba_ind_column;
+
+11. what is flashback ? Types of Flashback ? ✅-- 3 types. flashback table, transaction, database.
+
+===========================================================================================
+===========================================================================================
+
+Full_mock_15.06.2026
+----------------------
+
+1. which bg process collect snapshot and awr report genarate ?-- MMON
+2. How to genarate AWR report ?
+3. Types of index ?
+4. How do we know index having uses or not ?
+5. why we do index rebuilt ?
+6. manual db create step ?
+7. Deadlock senario ?
+------------------------------------------
+--- 1st cpu load check -- agar hain then long_running transaction check -- v$sessin_longops
+expdp/rman bckup ek saath chal raha then expdp ko pause kiya.
+
+--- quey slow:: 
+
+-- DB performance slow ::
+	1st  - using top command check the load (using this we see resource,processor,memory) - OK
+	2nd, - Alertlog check (is there is any ORA-error) - OK
+	3rd, - Communicate who are complaining to us about error. 
+	4th, - Get 'ASH' report. because, in ASH report session histroy stored. 
+	(ASH report me 99% DQL rehta hain) isme top 20 dql command jo sabse zada time le raha hain woh dega, top 20 commands jiska I/O zada woh dega, top 20 CPU, Top 20 sql statement.
+	5th, - 
+
+STORY Telling WHICH SITUATION FIX ALERT :: 
+-------------------------------------
+recently, L1 give me an issue then i checked TOP commnad first, TOP command was fine after that i cheked alertlog and find issue that max session process exchange limit. Then to solve that issue a login into db and kill all inactive session more than 24 hours. 
+
+before kill i took confirmation from upper level and did it. 
+
+===========================================================================================
+===========================================================================================
+
+
+Full_mock_12.06.2026
+----------------------
+
+1. DB perform slow resolve
+2. sql query running slow fix
+3. 2 ora-error that you resolve
+4. deadlock resolved ?
+5. identify deadlock ? 
+	-- we're not fix that. oracle handle it itself.
+
+6. How to check primary and standby sync or not ? full syntax ?
+	-- SELECT NAME, VALUE, UNIT FROM V$DATAGUARD_STATS WHERE NAME IN ('transport lag','apply lag');
+
+	-- SELECT THREAD#, MAX(SEQUENCE#) FROM V$ARCHIVED_LOG GROUP BY THREAD#;
+
+7. Mera SGA size 50gb hain how to make it 150gb ? increase kaise hoga command bolo ?
+	-- ALTER SYSTEM SET sga_max_size=150G SCOPE=SPFILE;
+	-- ALTER SYSTEM SET sga_target=150G SCOPE=SPFILE;
+	-- SHUTDOWN IMMEDIATE;
+	-- STARTUP;
+	-- SHOW PARAMETER sga;
+
+8. suppose mere pass pfile,spfile,backup kuch bhi nei hain kya step hoga ?
+=> 
+----------------------------------------------------------------------------
+Day to day activity -- mainly devided into 2 parts. focasing diffrent type of monitoring and 2nd is diffrent type of user request. 
+1. Monitoring: we use to diffrent type of job Monitoring (RMAN/expdp), tablespace monitoring, mount point monitoring,
+diffrent type of alert log monitoring.
+
+2. User Request: Then we used to recived difftent types of user request like, object creation, adding column to table, permission related request, connection type of request (TNS), db refresh activity etc.
+------------------------------------------------------------------------------

@@ -1,0 +1,46 @@
+full_mock_01.07.2026
+----------------------------
+1. what is instance ? -- Instance is combination of SGA (memory) + Background Processes ✅
+2. SGA components ? -- redo buffer cache,db buffer cache, shared,large,java pool ✅
+3. Purpose of DB buffer cache ? -- data blocks copies. ✅
+4. Types of blocks DB buffer cache holds ? -- free blocks, pinned blocks, clean, dirty ✅
+5. Select query flow ? ✅
+6. soft parsing and hard parsing diffrence ? ✅
+7. UGA & PGA diffrence ? ✅
+8. PGA components ? ✅
+9. What is PMON ? ✅
+10. what is SMON ? ✅
+11. When lgwr writes ? ✅
+12. What is CKPT ? Diffrence full checkpoint and incremental checkpoint ?✅
+13. Control file content ? ✅
+14. Purpose of Sysaux tablespace ? -- AWR (Automatic Workload Repository) snapshots ✅
+15. which BG process takes snapshot ? MMON ✅
+16. Temp tablespace purpose ? ✅
+17. When PGA is do sort why temp use for ? ✅
+18. UNDO Retaintion policy ? ✅
+19. UNDO Read Consistancy ? ✅
+20. Diffrence between DROP,DELETE & TRUNCATE ? ✅
+21. Diffrence between SYS and SYSTEM user ? ✅
+22. Diffrence oracle_home and oracle_base ? ✅
+23. How to check archivelog enable or not ? ✅
+24. What is auditing ?  ✅
+25. Types of auditing ? ✅
+26. AS a DBA what type of auding you prefer ? -- standerd auditing ✅
+27. Where audit log store ? ✅
+28. Alert log file purpose ? ✅
+29. What if alert log file drop ? -- auto created when new logs are genarate  ✅
+30. User and schema diffrence ? ✅
+31. what is password verify function ? ✅
+32. Enable password verify function ? ✅
+33. What is INDEX ? ✅
+34. Check which column index created ? ✅
+35. Types of INDEX ? ✅
+36. What is FLASHBACK ? ✅
+37. types of Flashback ? ✅
+38. How to do Flashback transactional ? ✅
+39. How to check flashback enable or not ? ✅
+40. how to enable flashback ? ✅
+41. What are the modes of shutdown ? 
+42. immediate and transaction diffrence ? ✅
+43. How to offline specific datafile ?
+44. 

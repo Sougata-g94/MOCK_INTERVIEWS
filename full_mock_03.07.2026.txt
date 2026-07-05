@@ -1,0 +1,18 @@
+full_mock_03.07.2026
+----------------------
+1. how to check the deadlock session ? and which column ? -- v$sessions; & 'blocking_session_id' column.
+2. UGA & PGA ?
+3. Auding location store ? -- adump location
+4. Add and Resize datafile ?
+5. How do we know when we have to resize or add datafile ? 
+	-- we check threshold value which 32gb max for 8kb datablock. if that threshold reached then add 
+	datafile if not then resize datafile.
+
+6. What is Restore point ?
+7. SCN no creted when ? -- every nano scoend.
+8. Index defination ?
+9. if i fire a command how do i know index are using or not ?
+10. if mount point got full how we fix it ? 
+	-- unnessery files delete - gzip compress files - archives log older than 15 days - backup deleted 	   which are got expired or obsolute
+
+11. restore point and garrented restore point diffrence ? -- 

@@ -1,0 +1,28 @@
+Full_mock_15.06.2026
+----------------------
+1. which bg process collect snapshot and awr report genarate ?-- MMON
+2. How to genarate AWR report ?
+3. Types of index ?
+4. How do we know index useing or not ?
+5. why we do index rebuilt ?
+6. manual db create step ?
+7. Deadlock senario ?
+------------------------------------------
+--- 1st cpu load check -- agar hain then long_running transaction check -- v$sessin_longops
+expdp/rman bckup ek saath chal raha then expdp ko pause kiya.
+
+--- quey slow:: 
+
+-- DB performance slow ::
+	1st  - using top command check the load (using this we see resource,processor,memory) - OK
+	2nd, - Alertlog check (is there is any ORA-error) - OK
+	3rd, - Communicate who are complaining to us about error. 
+	4th, - Get 'ASH' report. because, in ASH report session histroy stored. 
+	(ASH report me 99% DQL rehta hain) isme top 20 dql command jo sabse zada time le raha hain woh dega, top 20 commands jiska I/O zada woh dega, top 20 CPU, Top 20 sql statement.
+	5th, - 
+
+STORY Telling WHICH SITUATION FIX ALERT :: 
+-------------------------------------
+recently, L1 give me an issue then i checked TOP commnad first, TOP command was fine after that i cheked alertlog and find issue that max session process exchange limit. Then to solve that issue a login into db and kill all inactive session more than 24 hours. 
+
+before kill i took confirmation from upper level and did it. 

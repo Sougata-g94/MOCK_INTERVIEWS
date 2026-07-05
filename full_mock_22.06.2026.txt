@@ -1,0 +1,12 @@
+full_mock_22.06.2026
+----------------------
+1. what is SGA ? components in SGA ? ✅
+2. diffrence oracle_base and oracle_home ? ✅
+3. datafile's physical location ? ✅
+4. checkpoint information kya hota hain ?
+5. undo retaintion policy ? ✅
+6. instance recovery full process ? ✅
+7. cron tab me 5 star hota hain explain each star ? ✅
+8. profile types ? ✅
+9. manual db creation step ? ✅
+10. 

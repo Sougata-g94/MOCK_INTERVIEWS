@@ -1,0 +1,7 @@
+DG_mock_10.06.2026
+---------------------
+1. what is instance ? -- combination of SGA and bg process.
+2. if primay fails toh kon sa wala standby primary conver hoga ? -- dgmgrl>
+3. agar koi query long time le raha hain toh kaise resolve karenge ?
+4. DB performance slowness how to fix ?
+5. good plan or bad plan query how to identify ?--- sql tuning advisory report check

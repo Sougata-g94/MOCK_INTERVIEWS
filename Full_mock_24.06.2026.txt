@@ -1,0 +1,12 @@
+Full_mock_24.06.2026
+----------------------
+1. what is backup ?
+2. restore and recovery ?
+3. types of recovery ?
+4. what is rman retaintion polict ?
+5. types of backups ?
+6. obsolute backup and expired backup diffrence ?
+7. manual db steps ?
+8. purpose of running catelog.sql and cateprox.sql
+9. types of modes of shutdown ?
+10. 

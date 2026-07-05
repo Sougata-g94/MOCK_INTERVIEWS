@@ -1,0 +1,49 @@
+1. undo retaintion policy ? - ✅
+2. How to check commited and non-commited statment? -- SCN no se - ✅
+3. PMON ka kaam ? - ✅
+4. db buffer cache me kitne type ko data ko hold karta hain ? -- dirty blok, clean block, free block, pinned block - ✅
+5. How to check maximum number of datafiles allowed in the database ? 
+-- SHOW PARAMETER db_files; - ✅
+6. 'SMALLFILE Tablespace' and 'BIGFILE Tablespace' diffrence ? ✅
+7. maximumm how many data file we can add ? -- 200 ✅
+8. Maximum database file (datafile) size kitna hota hai? -- 128 GB ✅
+9. Default data block size kitna hota hai? -- 8kb ✅
+---------------------------------------------------------------------------------------
+------------------------------ 18.04.2026 ---------------------------------------------
+
+1. restore and recovery diffrence ?
+2. what is profile ? - ✅
+3. what is password verified function ? - ✅
+4. what is grace time in profile ?
+5. what is synnonym ? (alias) - ✅
+6. purpose of synonym ? - ✅
+7. types of synonym ? diffrence ? (public and private) - ✅
+8. types of shutdown modes ? 4 types (immediate, abort, normal, TRANSACTIONAL) ✅
+9. types of views ? (metaralize views and normal)
+10. how to check expired bckup ? -- RMAN> CROSSCHECK BACKUP; RMAN> LIST EXPIRED BACKUP; ✅
+11. how to check opsolute bckup ? -- RMAN> REPORT OBSOLETE; ✅
+12. How many types of rman retaintion policy ? -- 2 types.  ✅
+	=> 1. Redundancy-Based Retention Policy AND, 2. Recovery Window-Based Retention Policy
+13. What is 'RMAN Retention Policy' ? ✅
+	=> It tells RMAN which backups are no longer needed. 
+14. how to take control files bckup ? ✅
+	=> RMAN> BACKUP CURRENT CONTROLFILE;
+
+15. Check Retention Policy ? -- RMAN> SHOW RETENTION POLICY; ✅
+----------------------------------------------------------------------------------------------
+------------------------------ 22.04.2026 ---------------------------------------------
+
+1. Archive log me - ARCn - optional process jo likhta hain. ✅
+------------------------------------------------------------
+2. Archive log ka default size -- 8gb ✅
+------------------------------------------------------------
+3. SID & Database diffrence ? -- ek server pe 'prod' naam ka multiple database reh rakta hain, but SID alag hota hain. - ✅
+------------------------------------------------------------
+4. user & schema diffrence ? - ✅
+------------------------------------------------------------
+5. user lock & expired lock diffrence ? - ✅
+=> user lock - when a user is working on any table oracle creates a lock on this user.
+				 (unless commit)
+=> expired lock - when passsword got expired of any user.
+------------------------------------------------------------
+6. frequently undo retaintion policy error fix ?

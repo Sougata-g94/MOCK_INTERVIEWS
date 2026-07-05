@@ -1,0 +1,12 @@
+Full_mock_26.06.2026
+---------------------
+1. What is backup ? -- done
+2. Types of backup ? -- Hot and cold.
+3. Types of Recovery ? -- complete and incomplete recovery.
+4. Hot backup types ? -- physical and logical.
+5. restore and recovery diffrence ? -- done
+6. diffrential bckup and cumalative bckup diffrence ? -- done
+7. clone db steps ?
+8. How to take backup ?
+9. prerequisite of taking backup ?
+10. 

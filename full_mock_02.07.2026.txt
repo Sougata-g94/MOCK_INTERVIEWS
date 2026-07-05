@@ -1,0 +1,79 @@
+full_mock_02.07.2026
+-----------------------
+1. optimizer kya kaam hain ? ✅
+2. rollback & roll forword ?✅ 
+3. why synonym use ?  ✅
+4. clone db steps ?
+5. what is database architecture ? ✅
+------------------------------------------------------------
+
+Clone Database using RMAN DUPLICATE
+Step 1: Create a Password File
+
+On the target (auxiliary) server:
+
+orapwd file=$ORACLE_HOME/dbs/orapwCLONE password=oracle entries=10
+Step 2: Create PFILE
+
+Example (initCLONE.ora):
+
+db_name=PROD
+db_unique_name=CLONE
+memory_target=1G
+control_files='/u01/oradata/CLONE/control01.ctl'
+
+Note: db_name should match the source database for DUPLICATE. db_unique_name must be different.
+
+Step 3: Start the Auxiliary Database in NOMOUNT
+SQL> startup nomount pfile='/u01/app/oracle/product/19/dbhome_1/dbs/initCLONE.ora';
+
+Why NOMOUNT?
+
+Oracle reads the parameter file.
+No control file or data files are opened yet.
+RMAN needs this state to create the clone.
+
+Step 4: Connect to RMAN
+rman target sys/password@PROD auxiliary sys/password@CLONE
+Target = Source database
+Auxiliary = Clone database
+
+Step 5: Run DUPLICATE
+If backup is available
+RMAN> DUPLICATE TARGET DATABASE TO CLONE;
+Or directly from the active database
+RMAN> DUPLICATE TARGET DATABASE TO CLONE
+      FROM ACTIVE DATABASE;
+
+What RMAN does automatically:
+
+Copies data files
+Creates the control file
+Recovers the database
+Opens the cloned database
+Manual Cloning (Basic Syntax)
+
+If not using DUPLICATE, the main commands are:
+
+Restore the control file:
+
+RMAN> RESTORE CONTROLFILE FROM '/backup/control.bkp';
+
+Mount the database:
+
+SQL> ALTER DATABASE MOUNT;
+
+Restore the database:
+
+RMAN> RESTORE DATABASE;
+
+Recover the database:
+
+RMAN> RECOVER DATABASE;
+
+Open the database:
+
+SQL> ALTER DATABASE OPEN RESETLOGS;
+Interview Answer (Easy to Remember)
+
+"First, create a password file and PFILE for the clone database. Start the auxiliary database in NOMOUNT mode. Connect RMAN to both the source and auxiliary databases, then run DUPLICATE TARGET DATABASE TO CLONE FROM ACTIVE DATABASE;. RMAN automatically restores the control file, copies the data files, recovers the database, and opens the cloned database."

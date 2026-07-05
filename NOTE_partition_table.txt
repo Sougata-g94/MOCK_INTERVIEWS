@@ -1,0 +1,5 @@
+statistics nehi rehna par kya impact parta hain database pe ?
+full table scan kya hain ?
+how to find out size of index ? (index monitoring on - parameter on karenge) - run query
+kitna size hone se ek table ka index will be benificery ? -- thumb-rule 10GB size of the table
+kitna size hone se ek table ka pertition will be benificery ?

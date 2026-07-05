@@ -1,0 +1,8 @@
+mock - 23.05.2026
+------------------ Data Guard ----------
+1. What is Scan Ip ?
+2. how apply sql statment primary to standby ? (logical standby)
+3. what are the redo transport services ? -- log writer and archive log
+4. LNS and RFS process ?
+5. what is active dataguard ? --- report genarate kar sakte hain.
+6. What does mean by 'archive gaps' ?
